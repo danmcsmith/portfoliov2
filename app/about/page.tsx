@@ -137,10 +137,12 @@ export default function AboutPage() {
                 <ul className="space-y-1">
                   <li>Interaction design</li>
                   <li>Mobile and desktop (webapp)</li>
+                  <li>Prompt engineering</li>
                   <li>Healthcare product design</li>
                   <li>User Experience Research (UXR)</li>
                   <li>Rapid prototyping</li>
                   <li>Design strategy</li>
+                  
                 </ul>
               </div>
 
@@ -149,7 +151,8 @@ export default function AboutPage() {
                 <ul className="space-y-1">
                   <li>Figma</li>
                   <li>Maze</li>
-                  <li>v0 and Cursor</li>
+                  <li>v0</li>
+                  <li>Cursor</li>
                   <li>Adobe</li>
                   <li>Jira</li>
                   <li>Asana</li>

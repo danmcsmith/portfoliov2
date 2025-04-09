@@ -21,8 +21,8 @@ export const caseStudies: CaseStudy[] = [
     description:
       "Designing the MVP for AbleTo's subclinical, protocolized 8 week mental health coaching product. The project included designing three main features; Home, Explore, and Sessions. As the lead on this project, my role involved not only designing the experience but also cross-functional team management, workshop design, senior leadership presentation, and design systems updates. We will take a deeper dive into designing the Home feature — the participant's coaching activities and upcoming sessions.",
     categories: ["Healthcare", "Mobile", "Desktop", "Consumer Facing"],
-    thumbnailImage: "/placeholder.svg?height=600&width=800",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
+    thumbnailImage: "/home-cover-thumbnail.jpg?height=600&width=800",
+    coverImage: "/home-cover.jpg?height=1080&width=1920",
     isProtected: true,
     role: "Lead Product Designer",
     timeline: "1 year",
@@ -35,18 +35,18 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "cs2",
     slug: "explore-feature",
-    title: "Explore Feature",
+    title: "Designing the Explore feature",
     description:
-      "Creating an intuitive dashboard for healthcare providers to monitor patient data and make informed decisions.",
-    categories: ["Desktop", "Healthcare", "Information Architecture"],
+      "Around 2022, AbleTo and Sanvello merged. Sanvello had a rich content library, however the information architecture (IA) did not fit in AbleTo's ecosystem. As the consumer-facing designer, I lead the design efforts in creating the IA structure, layout, and interaction experience for all AbleTo and the newly merged content from Sanvello.\n\nExplore, the consumer-facing housing of all content libraries at AbleTo, was a cross-product initiative that required consideration of all product IA's in order to make a cohesive, universal experience.",
+    categories: ["Mobile", "Desktop", "Healthcare", "Information Architecture"],
     thumbnailImage: "/placeholder.svg?height=600&width=800",
     coverImage: "/placeholder.svg?height=1080&width=1920",
     isProtected: true,
-    role: "Senior UX Designer",
+    role: "Product Designer",
     timeline: "3 months",
-    tools: ["Figma", "Sketch", "InVision"],
+    tools: ["Figma", "Maze", "Miro"],
     problem:
-      "Healthcare providers were overwhelmed by the amount of patient data available and struggled to quickly identify critical information during patient visits.",
+      "AbleTo did not have a consumer-facing content library built. After the content library migrated from Sanvello, we needed a scalable IA that could encompass both AbleTo content and Sanvello content. In addition, new content was roadmapped thus the IA had to be flexible. Finally, Explore was a cross-product initiative thus the IA had to make sense for all products it lived in.",
     solution:
       "A dashboard that presents key patient information at a glance, with customizable views and visual indicators for abnormal results. The design reduces cognitive load and helps providers make faster, more informed decisions.",
   },

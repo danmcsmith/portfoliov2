@@ -137,7 +137,8 @@ export default function CaseStudyPage() {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Research and discovery</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Starting with discovery, I reviewed legacy research, paired with our UXR team to conduct interviews and unmoderated surveys, ran stakeholder workshops, and design audit. Through discovery, I was able to hone the design direction by identifying the intersection between user and business needs. From here, I started ideating viable concept directions for user testing.
+                  During discovery, I focus on researching the problem to ensure a understanding of the information architecture before iterating.
+                  By reviewing legacy research, conducting design audits, interviews with Sanvello stakeholders, in the wild audits, and user research, I build a path for designs to move forward. Taking my time so I have minimal throwaway work later. Moving slowly to move fast.
                 </p>
                 <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
@@ -152,7 +153,8 @@ export default function CaseStudyPage() {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Ideation, validation, and testing</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  As viable concepts were tested and approved, iterations moved to full-bleed handoffs, user flows, prototypes, and documentation. Throughout my process, I join cross-functionally but work autonomously, holding myself accountable for all stages of the design process. Attending design critiques weekly, presenting to stakeholders, joining clinical teams, pairing with engineering weekly, and user testing are all parts of my process. Following agile methodoly, I paired with the PM to thoroughly document deisgns for handoff. This included building prototypes and user flows for dev.
+                  After having a few IAs and concepts ready, I present design directions to critiques, stakeholder review, and senior leadership meetings for approvals. My final step is validating the direction through user testing. During workshops, design critiques, and jams, iterations are refined and improved, getting closer to the final design phase.
+                  Explore required multiple stakeholders, working cross-functionally. Although I am autonomous and hold myself accountable, for best design output requires a collaborative approach. Through reviews and workshops while following design timelines, the Explore feature continued a forward direction in design, making sure to validate all viable solutions through user testing along the way.
                 </p>
                 <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
@@ -170,7 +172,8 @@ export default function CaseStudyPage() {
           <section className="mb-16">
             <h2 className="text-xl font-semibold mb-4">Handoff and documentation</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              During the build process, I join daily rituals as support while providing VQA as the final step of each ticket. Working in 2 week sprints, we translate designs and itneractions into front-end designs communicating with backend architecture. In addition, working with the data team, creating dashboards on Looker to monitor improvements as well as notice unforseen problems. Using Fullstory, we capture where users dropoff, get stuck, or sad path flows for future iterations.
+              After final approvals and socializing the new experience, designs are marked "ready for dev" and are handed off.
+              Working in 2 week sprints, I pair with PMs and tech leads to write tickets and help sprint planning. Sitting in an agile pod and running 2 week sprints, we transformed designs into functional features, flagged for release. In addition, I handoff designs to the content teams to start producing copy, illustrations, and organizing how artifacts are displayed. Joined by the clinical team, final designs are reviewed to follow evidence-based best practices.
             </p>
 
             <div className="relative aspect-video overflow-hidden rounded-lg mb-8">
@@ -198,23 +201,25 @@ export default function CaseStudyPage() {
           </section>
 
           {/* Outcomes */}
-          <section>
-            <h2 className="text-3xl font-bold mb-6">Outcomes</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Post launch study* (1/23-6/23) understanding the value of Coaching+ including patient assessment outcome scores, identifying value markers for coaching programs, and set baseline NPS
-            </p>
+          {caseStudy.slug !== "explore-feature" && (
+            <section>
+              <h2 className="text-3xl font-bold mb-6">Outcomes</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Post launch study* (1/23-6/23) understanding the value of Coaching+ including patient assessment outcome scores, identifying value markers for coaching programs, and set baseline NPS
+              </p>
 
-            <ul className="list-disc pl-6 space-y-4 text-lg mb-12">
-              <li>+74 NPS</li>
-              <li>51% average reduction in depression</li>
-              <li>42% average reduction in anxiety</li>
-              <li>36% average reduction in social anxiety</li>
-            </ul>
+              <ul className="list-disc pl-6 space-y-4 text-lg mb-12">
+                <li>+74 NPS</li>
+                <li>51% average reduction in depression</li>
+                <li>42% average reduction in anxiety</li>
+                <li>36% average reduction in social anxiety</li>
+              </ul>
 
-            <div className="relative aspect-video overflow-hidden rounded-lg">
-              <Image src="/placeholder.svg?height=720&width=1280" alt="Outcome metrics" fill className="object-cover" />
-            </div>
-          </section>
+              <div className="relative aspect-video overflow-hidden rounded-lg">
+                <Image src="/placeholder.svg?height=720&width=1280" alt="Outcome metrics" fill className="object-cover" />
+              </div>
+            </section>
+          )}
         </motion.div>
       </div>
     </article>

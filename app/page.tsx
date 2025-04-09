@@ -33,11 +33,11 @@ export default function Home() {
       <section className="relative h-screen flex items-center overflow-hidden">
         <motion.div className="absolute inset-0 z-0" style={{ y, opacity }}>
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/hero-draw.svg?height=1080&width=1920"
             alt="Abstract background"
             fill
             priority
-            className="object-cover"
+            className="object-cover hidden md:block"
           />
         </motion.div>
 
@@ -119,7 +119,7 @@ export default function Home() {
               className="relative aspect-square"
             >
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src="/about-me.jpg?height=600&width=600"
                 alt="Designer portrait"
                 fill
                 className="object-cover rounded-lg"
