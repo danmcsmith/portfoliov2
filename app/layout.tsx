@@ -13,7 +13,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 export const metadata: Metadata = {
   title: "Product Designer Portfolio",
   description: "Portfolio website showcasing healthcare-focused design work",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/logo-dark@2x.svg',
+    shortcut: '/logo-dark@2x.svg',
+    apple: '/logo-dark@2x.svg',
+  }
 }
 
 export default function RootLayout({

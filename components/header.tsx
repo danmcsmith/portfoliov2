@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
+import { useTheme } from "next-themes"
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -18,6 +19,12 @@ export default function Header() {
   const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,8 +47,14 @@ export default function Header() {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold">
-          Dan Smith
+        <Link href="/" className="relative h-8 w-24">
+          {mounted && (
+            <img
+              src={resolvedTheme === "dark" ? "/logo-light@2x.svg" : "/logo-dark@2x.svg"}
+              alt="Dan Smith"
+              className="h-full w-full object-contain"
+            />
+          )}
         </Link>
 
         {/* Desktop Navigation */}
