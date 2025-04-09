@@ -2,6 +2,19 @@ import type { CaseStudy } from "@/types/case-study"
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: "cs-consent",
+    slug: "therapy-consent",
+    title: "Therapy Consent to Treat",
+    description: "Designing the HIPAA compliant consumer-facing treatment documentation onboarding experience at Optum",
+    categories: ["Healthcare", "Consumer Facing", "Coming Soon"],
+    thumbnailImage: "/placeholder.svg?height=600&width=800",
+    coverImage: "/placeholder.svg?height=1080&width=1920",
+    isProtected: true,
+    role: "Lead Product Designer",
+    timeline: "Coming Soon",
+    tools: ["Figma", "Miro", "Maze"],
+  },
+  {
     id: "cs1",
     slug: "coaching-plus-product",
     title: "Coaching+ Product",
