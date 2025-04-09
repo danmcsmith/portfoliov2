@@ -48,9 +48,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">Healthcare Product Design</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">Product design with people in mind</h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Creating intuitive digital experiences that improve healthcare outcomes and enhance patient care.
+              Creating intuitive digital products that improve outcomes and experiences.
             </p>
             <Button asChild size="lg">
               <Link href="/case-studies">
@@ -102,8 +102,7 @@ export default function Home() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                I'm a product designer specializing in healthcare digital experiences, with a focus on creating
-                intuitive interfaces that improve patient outcomes and streamline clinical workflows.
+                I'm a product designer with a mission of promoting individual wellbeing at scale through thoughtful design experience.
               </p>
               <Button asChild variant="outline">
                 <Link href="/about">

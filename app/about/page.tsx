@@ -3,7 +3,8 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Mail, Github, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, Mail, Linkedin } from "lucide-react"
+import { SiMedium } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 
 export default function AboutPage() {
@@ -15,9 +16,9 @@ export default function AboutPage() {
         transition={{ duration: 0.5 }}
         className="max-w-3xl mb-16"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">About me</h1>
         <p className="text-xl text-muted-foreground">
-          Product designer specializing in healthcare digital experiences.
+          Senior level product designer with experience designing in health and wellness.
         </p>
       </motion.div>
 
@@ -31,32 +32,30 @@ export default function AboutPage() {
           <div className="sticky top-24">
             <div className="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
               <Image
-                src="/placeholder.svg?height=900&width=600"
-                alt="Designer portrait"
+                src="/dan-smith-portrait.jpg"
+                alt="Dan Smith - Product Designer"
                 fill
                 className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={85}
               />
             </div>
 
             <div className="flex flex-wrap gap-4">
               <Button variant="outline" size="icon" asChild>
-                <Link href="mailto:contact@example.com" aria-label="Email">
+                <Link href="mailto:danmcsmith@gmail.com" aria-label="Email">
                   <Mail className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Github className="h-5 w-5" />
+                <Link href="https://dansmithlpc.medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+                  <SiMedium className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Link href="https://www.linkedin.com/in/dansmithdesigns/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="icon" asChild>
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                  <Twitter className="h-5 w-5" />
                 </Link>
               </Button>
             </div>
@@ -70,21 +69,13 @@ export default function AboutPage() {
           className="lg:col-span-7"
         >
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4">Background</h2>
+            <h2 className="text-2xl font-bold mb-4">Design with intention</h2>
             <div className="space-y-4 text-lg">
               <p>
-                I'm a product designer with over 8 years of experience specializing in healthcare digital experiences.
-                My work focuses on creating intuitive interfaces that improve patient outcomes and streamline clinical
-                workflows.
+                My origin story begins with 13 years as a licensed therapist. I worked in multiple clinics, with a wide spread of demographics, held private practices, and worked in the private and public sectors. It didn't matter what setting I was in, I noticed the same consistent problems. Our system is broken and people who need help the most were paying the price.
               </p>
               <p>
-                With a background in both design and healthcare informatics, I bring a unique perspective to solving
-                complex problems in the medical space. I'm passionate about using design to make healthcare more
-                accessible, efficient, and human-centered.
-              </p>
-              <p>
-                Throughout my career, I've collaborated with multidisciplinary teams including clinicians, developers,
-                and business stakeholders to deliver solutions that meet both user needs and business objectives.
+                Although my work as a provider was valuable, I wanted to help the lines of people not getting the care they deserved. I pivoted to product design and never looked back. A nerd at heart, ambitiously creative, and empathy-centric, I love designing beautiful digital mediums that have meaning and purpose. I'm mission driven, promoting the health and wellness of individuals at scale through product design.
               </p>
             </div>
           </section>
@@ -94,29 +85,25 @@ export default function AboutPage() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold">Senior Product Designer</h3>
-                <p className="text-muted-foreground mb-2">HealthTech Inc. • 2020 - Present</p>
+                <p className="text-muted-foreground mb-2">Optum • 2023 - Present</p>
                 <p>
-                  Lead designer for patient-facing applications and clinical tools. Established design system and user
-                  research practices. Improved user satisfaction scores by 35%.
+                  Current design leader for all AbleTo behavioral health products (consumer and provider facing). Lead designing an engaging cross-product consumer experience integrated with AbleTo's full suite while updating provider tools for session management.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold">UX Designer</h3>
-                <p className="text-muted-foreground mb-2">MedSolutions • 2017 - 2020</p>
+                <h3 className="text-xl font-semibold">Product Designer</h3>
+                <p className="text-muted-foreground mb-2">AbleTo • 2021 - 2023</p>
                 <p>
-                  Designed interfaces for electronic health record systems. Conducted user research and usability
-                  testing to improve clinical workflows. Collaborated with development teams to implement design
-                  solutions.
+                  Led the design lifecycle for a mental health coaching app and integrated a referrals and care coordination platform into Optum's ecosystem. Served as the design lead on all therapy and provider products, designing for both consumer and provider-facing interfaces.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold">UI/UX Designer</h3>
-                <p className="text-muted-foreground mb-2">Digital Health Agency • 2015 - 2017</p>
+                <h3 className="text-xl font-semibold">Contract Product Designer</h3>
+                <p className="text-muted-foreground mb-2">Awesome Studios • 2021 (6 month contract)</p>
                 <p>
-                  Created user interfaces for healthcare applications and websites. Developed visual design systems and
-                  interaction patterns for multiple clients in the healthcare sector.
+                  Designed full product life cycles for the I Think I Have product and updated WowCare's care delivery experience. Utilized Figma for design and Builder.io for development, managing an external engineering team throughout the development process.
                 </p>
               </div>
             </div>
@@ -126,13 +113,18 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Education</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-xl font-semibold">Master of Science in Human-Computer Interaction</h3>
-                <p className="text-muted-foreground">University of Design • 2015</p>
+                <h3 className="text-xl font-semibold">UX/UI Specialization</h3>
+                <p className="text-muted-foreground">CalArts • 2019 - 2020</p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold">Bachelor of Arts in Graphic Design</h3>
-                <p className="text-muted-foreground">Design Institute • 2013</p>
+                <h3 className="text-xl font-semibold">M.S. in Clinical Mental Health Counseling</h3>
+                <p className="text-muted-foreground">University of Wyoming • 2010 - 2012</p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold">B.S. in Psychology, B.S. in Business Management</h3>
+                <p className="text-muted-foreground">Northern Arizona University • 2004 - 2009</p>
               </div>
             </div>
           </section>
@@ -143,11 +135,12 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Design</h3>
                 <ul className="space-y-1">
-                  <li>User Experience Design</li>
-                  <li>User Interface Design</li>
-                  <li>Interaction Design</li>
-                  <li>Information Architecture</li>
-                  <li>Design Systems</li>
+                  <li>Interaction design</li>
+                  <li>Mobile and desktop (webapp)</li>
+                  <li>Healthcare product design</li>
+                  <li>User Experience Research (UXR)</li>
+                  <li>Rapid prototyping</li>
+                  <li>Design strategy</li>
                 </ul>
               </div>
 
@@ -155,10 +148,11 @@ export default function AboutPage() {
                 <h3 className="text-lg font-semibold mb-2">Tools</h3>
                 <ul className="space-y-1">
                   <li>Figma</li>
-                  <li>Sketch</li>
-                  <li>Adobe Creative Suite</li>
-                  <li>Principle</li>
-                  <li>Miro</li>
+                  <li>Maze</li>
+                  <li>v0 and Cursor</li>
+                  <li>Adobe</li>
+                  <li>Jira</li>
+                  <li>Asana</li>
                 </ul>
               </div>
             </div>

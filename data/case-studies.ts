@@ -3,11 +3,11 @@ import type { CaseStudy } from "@/types/case-study"
 export const caseStudies: CaseStudy[] = [
   {
     id: "cs1",
-    slug: "patient-portal-redesign",
-    title: "Patient Portal Redesign",
+    slug: "coaching-plus-product",
+    title: "Coaching+ Product",
     description:
       "Redesigning a patient portal to improve user experience and accessibility for patients managing their healthcare.",
-    categories: ["UX Design", "Healthcare", "Accessibility"],
+    categories: ["Desktop", "Healthcare", "Consumer Facing"],
     thumbnailImage: "/placeholder.svg?height=600&width=800",
     coverImage: "/placeholder.svg?height=1080&width=1920",
     isProtected: true,
@@ -21,11 +21,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "cs2",
-    slug: "clinical-dashboard",
-    title: "Clinical Dashboard for Healthcare Providers",
+    slug: "explore-feature",
+    title: "Explore Feature",
     description:
       "Creating an intuitive dashboard for healthcare providers to monitor patient data and make informed decisions.",
-    categories: ["UI Design", "Data Visualization", "Healthcare"],
+    categories: ["Desktop", "Healthcare", "Information Architecture"],
     thumbnailImage: "/placeholder.svg?height=600&width=800",
     coverImage: "/placeholder.svg?height=1080&width=1920",
     isProtected: true,
@@ -39,11 +39,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "cs3",
-    slug: "telehealth-platform",
-    title: "Telehealth Platform Experience",
+    slug: "scheduling",
+    title: "Scheduling",
     description:
       "Designing a telehealth platform that connects patients with healthcare providers for virtual consultations.",
-    categories: ["Product Design", "Healthcare", "Mobile"],
+    categories: ["Mobile", "Healthcare", "Consumer Facing"],
     thumbnailImage: "/placeholder.svg?height=600&width=800",
     coverImage: "/placeholder.svg?height=1080&width=1920",
     isProtected: false,
@@ -57,10 +57,10 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "cs4",
-    slug: "medication-management-app",
-    title: "Medication Management App",
+    slug: "checkout",
+    title: "Checkout",
     description: "Creating a mobile app to help patients manage their medications and improve adherence.",
-    categories: ["Mobile Design", "Healthcare", "UX Research"],
+    categories: ["Mobile", "MVP", "Consumer Facing"],
     thumbnailImage: "/placeholder.svg?height=600&width=800",
     coverImage: "/placeholder.svg?height=1080&width=1920",
     isProtected: false,
@@ -74,11 +74,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "cs5",
-    slug: "healthcare-provider-directory",
-    title: "Healthcare Provider Directory",
+    slug: "karuna",
+    title: "Karuna",
     description:
       "Redesigning a provider directory to help patients find the right healthcare providers for their needs.",
-    categories: ["Information Architecture", "Search Experience", "Healthcare"],
+    categories: ["Desktop", "Healthcare", "Tooling", "Information Architecture"],
     thumbnailImage: "/placeholder.svg?height=600&width=800",
     coverImage: "/placeholder.svg?height=1080&width=1920",
     isProtected: true,
@@ -89,23 +89,5 @@ export const caseStudies: CaseStudy[] = [
       "Patients struggled to find appropriate healthcare providers due to confusing search interfaces, incomplete information, and poor filtering options.",
     solution:
       "A redesigned provider directory with intuitive search, comprehensive filtering options, and detailed provider profiles. The new design helps patients make informed decisions about their healthcare providers.",
-  },
-  {
-    id: "cs6",
-    slug: "health-tracking-wearable",
-    title: "Health Tracking Wearable Interface",
-    description:
-      "Designing the companion app for a health tracking wearable device focused on chronic condition management.",
-    categories: ["Mobile Design", "IoT", "Healthcare"],
-    thumbnailImage: "/placeholder.svg?height=600&width=800",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
-    isProtected: false,
-    role: "Product Designer",
-    timeline: "7 months",
-    tools: ["Figma", "Framer", "UserTesting"],
-    problem:
-      "Existing health tracking apps focused on fitness rather than chronic condition management, making them less useful for patients with ongoing health concerns.",
-    solution:
-      "A companion app that interprets health data in the context of specific chronic conditions, provides actionable insights, and facilitates sharing information with healthcare providers.",
-  },
+  }
 ]

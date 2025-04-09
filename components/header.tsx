@@ -41,7 +41,7 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between">
         <Link href="/" className="text-xl font-bold">
-          Portfolio
+          Dan Smith
         </Link>
 
         {/* Desktop Navigation */}

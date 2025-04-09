@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Mail, Linkedin } from "lucide-react"
+import { SiMedium } from "react-icons/si"
 
 export default function Footer() {
   return (
@@ -7,8 +8,8 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Portfolio</h3>
-            <p className="text-muted-foreground">Healthcare product designer creating intuitive digital experiences.</p>
+            <h3 className="text-lg font-semibold mb-4">Dan Smith</h3>
+            <p className="text-muted-foreground">Senior level product designer based out of Portland, Oregon</p>
           </div>
 
           <div>
@@ -43,13 +44,13 @@ export default function Footer() {
                 <Mail className="h-5 w-5" />
               </Link>
               <Link
-                href="https://github.com"
+                href="https://medium.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="GitHub"
+                aria-label="Medium"
               >
-                <Github className="h-5 w-5" />
+                <SiMedium className="h-5 w-5" />
               </Link>
               <Link
                 href="https://linkedin.com"
@@ -60,21 +61,12 @@ export default function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Portfolio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Dan Smith. All rights reserved.</p>
         </div>
       </div>
     </footer>
