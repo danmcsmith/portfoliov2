@@ -54,7 +54,7 @@ export default function Home() {
             </p>
             <Button asChild size="lg">
               <Link href="/case-studies">
-                View Case Studies <ArrowRight className="ml-2 h-4 w-4" />
+                Projects <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </motion.div>
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <Button asChild variant="outline" size="lg">
               <Link href="/case-studies">
-                View All Case Studies <ArrowRight className="ml-2 h-4 w-4" />
+                View all projects <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>

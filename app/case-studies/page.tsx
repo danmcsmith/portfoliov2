@@ -13,7 +13,7 @@ export default function CaseStudiesPage() {
         transition={{ duration: 0.5 }}
         className="max-w-3xl mb-16"
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">Case Studies</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">Work</h1>
         <p className="text-xl text-muted-foreground">
           Explore my work in healthcare product design, showcasing problem-solving approaches and design processes.
         </p>

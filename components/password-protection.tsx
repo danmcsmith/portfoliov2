@@ -61,9 +61,9 @@ export default function PasswordProtection({ caseStudyId }: PasswordProtectionPr
           <div className="bg-muted p-3 rounded-full mb-4">
             <Lock className="h-6 w-6" />
           </div>
-          <h1 className="text-2xl font-bold mb-2">Protected Case Study</h1>
+          <h1 className="text-2xl font-bold mb-2">Protected project</h1>
           <p className="text-muted-foreground">
-            This case study is password protected. Please enter the password to view it.
+            This project is password protected. Please enter the password to view it.
           </p>
         </div>
 

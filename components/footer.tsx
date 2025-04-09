@@ -22,7 +22,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Case Studies
+                  Work
                 </Link>
               </li>
               <li>

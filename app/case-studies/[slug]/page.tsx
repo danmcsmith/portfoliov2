@@ -33,7 +33,7 @@ export default function CaseStudyPage() {
       <div className="container py-24 text-center">
         <h1 className="text-3xl font-bold mb-6">Case Study Not Found</h1>
         <Button onClick={() => router.push("/case-studies")}>
-          <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
+          <ArrowLeft className="mr-2 h-4 w-4" /> Back to Work
         </Button>
       </div>
     )
@@ -73,7 +73,7 @@ export default function CaseStudyPage() {
                 onClick={() => router.push("/case-studies")}
                 className="mb-6 bg-background/80 backdrop-blur-sm hover:bg-background/90"
               >
-                <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
+                <ArrowLeft className="mr-2 h-4 w-4" /> Back to Work
               </Button>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">{caseStudy.title}</h1>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -135,10 +135,9 @@ export default function CaseStudyPage() {
             <h2 className="text-3xl font-bold mb-6">Process</h2>
             <div className="space-y-12">
               <div>
-                <h3 className="text-xl font-semibold mb-4">Research</h3>
+                <h3 className="text-xl font-semibold mb-4">Research and discovery</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Conducted interviews with 12 healthcare professionals to understand their workflow challenges and
-                  needs. Created journey maps to identify pain points in the current process.
+                  Starting with discovery, I reviewed legacy research, paired with our UXR team to conduct interviews and unmoderated surveys, ran stakeholder workshops, and design audit. Through discovery, I was able to hone the design direction by identifying the intersection between user and business needs. From here, I started ideating viable concept directions for user testing.
                 </p>
                 <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
@@ -151,10 +150,9 @@ export default function CaseStudyPage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Ideation</h3>
+                <h3 className="text-xl font-semibold mb-4">Ideation, validation, and testing</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Developed multiple concepts through sketching and wireframing. Conducted collaborative design
-                  workshops with stakeholders to refine ideas.
+                  As viable concepts were tested and approved, iterations moved to full-bleed handoffs, user flows, prototypes, and documentation. Throughout my process, I join cross-functionally but work autonomously, holding myself accountable for all stages of the design process. Attending design critiques weekly, presenting to stakeholders, joining clinical teams, pairing with engineering weekly, and user testing are all parts of my process. Following agile methodoly, I paired with the PM to thoroughly document deisgns for handoff. This included building prototypes and user flows for dev.
                 </p>
                 <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
@@ -165,31 +163,14 @@ export default function CaseStudyPage() {
                   />
                 </div>
               </div>
-
-              <div>
-                <h3 className="text-xl font-semibold mb-4">Prototyping & Testing</h3>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Created interactive prototypes and conducted usability testing with end users. Iterated based on
-                  feedback to improve the user experience.
-                </p>
-                <div className="relative aspect-video overflow-hidden rounded-lg">
-                  <Image
-                    src="/placeholder.svg?height=720&width=1280"
-                    alt="Prototyping process"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
             </div>
           </section>
 
           {/* Solution */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-6">Solution</h2>
+            <h2 className="text-xl font-semibold mb-4">Handoff and documentation</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              {caseStudy.solution ||
-                "Designed an intuitive interface that streamlined data entry and retrieval while maintaining strict privacy controls. The new system reduced task completion time by 40% and improved data accuracy by 25%."}
+              During the build process, I join daily rituals as support while providing VQA as the final step of each ticket. Working in 2 week sprints, we translate designs and itneractions into front-end designs communicating with backend architecture. In addition, working with the data team, creating dashboards on Looker to monitor improvements as well as notice unforseen problems. Using Fullstory, we capture where users dropoff, get stuck, or sad path flows for future iterations.
             </p>
 
             <div className="relative aspect-video overflow-hidden rounded-lg mb-8">
@@ -220,15 +201,14 @@ export default function CaseStudyPage() {
           <section>
             <h2 className="text-3xl font-bold mb-6">Outcomes</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              {caseStudy.outcomes ||
-                "The redesigned system was successfully implemented across 5 healthcare facilities, resulting in:"}
+              Post launch study* (1/23-6/23) understanding the value of Coaching+ including patient assessment outcome scores, identifying value markers for coaching programs, and set baseline NPS
             </p>
 
             <ul className="list-disc pl-6 space-y-4 text-lg mb-12">
-              <li>40% reduction in data entry time</li>
-              <li>25% improvement in data accuracy</li>
-              <li>92% user satisfaction rate</li>
-              <li>Compliance with all relevant healthcare privacy regulations</li>
+              <li>+74 NPS</li>
+              <li>51% average reduction in depression</li>
+              <li>42% average reduction in anxiety</li>
+              <li>36% average reduction in social anxiety</li>
             </ul>
 
             <div className="relative aspect-video overflow-hidden rounded-lg">

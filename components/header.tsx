@@ -10,7 +10,7 @@ import { ModeToggle } from "@/components/mode-toggle"
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "Case Studies", path: "/case-studies" },
+  { name: "Work", path: "/case-studies" },
   { name: "About", path: "/about" },
 ]
 

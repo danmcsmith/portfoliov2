@@ -15,8 +15,8 @@ const mockVerifyPassword = async (caseStudyId: string, password: string): Promis
   // Simulate API delay
   await new Promise((resolve) => setTimeout(resolve, 800))
 
-  // For demo purposes, accept any password with length > 3
-  return password.length > 3
+  // Accept the password "dansmithdesigns" for all protected case studies
+  return password === "dansmithdesigns"
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {

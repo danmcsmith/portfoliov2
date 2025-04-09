@@ -17,18 +17,18 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "cs1",
     slug: "coaching-plus-product",
-    title: "Coaching+ Product",
+    title: "Designing the Coaching+ MVP",
     description:
-      "Redesigning a patient portal to improve user experience and accessibility for patients managing their healthcare.",
-    categories: ["Desktop", "Healthcare", "Consumer Facing"],
+      "Designing the MVP for AbleTo's subclinical, protocolized 8 week mental health coaching product. The project included designing three main features; Home, Explore, and Sessions. As the lead on this project, my role involved not only designing the experience but also cross-functional team management, workshop design, senior leadership presentation, and design systems updates. We will take a deeper dive into designing the Home feature — the participant's coaching activities and upcoming sessions.",
+    categories: ["Healthcare", "Mobile", "Desktop", "Consumer Facing"],
     thumbnailImage: "/placeholder.svg?height=600&width=800",
     coverImage: "/placeholder.svg?height=1080&width=1920",
     isProtected: true,
     role: "Lead Product Designer",
-    timeline: "4 months",
-    tools: ["Figma", "Miro", "Principle"],
+    timeline: "1 year",
+    tools: ["Figma", "Jira", "Confluence", "Maze"],
     problem:
-      "The existing patient portal had low adoption rates due to confusing navigation, complex workflows, and poor mobile experience. Patients struggled to access their health information and communicate with providers.",
+      "In 2017, AbleTo acquired Joyable, a CBT digital curriculum accompanied by mental health coaching. First iteration was reskin Joyable to AbleTo branding and rename to Digital+. Noticing dropoff rates and negative reviews, AbleTo decided to pivot. Letting clinical take the lead, AbleTo decided on redesigning the product to be a coaching-first product with supplemental digital CBT activities.",
     solution:
       "A redesigned portal with simplified navigation, streamlined workflows, and a responsive design that works across all devices. The new design prioritizes the most common tasks and improves accessibility.",
   },

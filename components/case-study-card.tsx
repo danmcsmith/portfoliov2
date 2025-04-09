@@ -74,7 +74,7 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
           </div>
         ) : (
           <div className="flex items-center text-sm font-medium text-accent">
-            View Case Study <ArrowRight className="ml-1 h-4 w-4" />
+            View project <ArrowRight className="ml-1 h-4 w-4" />
           </div>
         )}
       </div>
