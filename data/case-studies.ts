@@ -23,7 +23,7 @@ export const caseStudies: CaseStudy[] = [
     categories: ["Healthcare", "Mobile", "Desktop", "Consumer Facing"],
     thumbnailImage: "/home-cover-thumbnail.jpg?height=600&width=800",
     coverImage: "/home-cover.jpg?height=1080&width=1920",
-    isProtected: true,
+    isProtected: false,
     role: "Lead Product Designer",
     timeline: "1 year",
     tools: ["Figma", "Jira", "Confluence", "Maze"],
@@ -39,51 +39,16 @@ export const caseStudies: CaseStudy[] = [
     description:
       "Around 2022, AbleTo and Sanvello merged. Sanvello had a rich content library, however the information architecture (IA) did not fit in AbleTo's ecosystem. As the consumer-facing designer, I lead the design efforts in creating the IA structure, layout, and interaction experience for all AbleTo and the newly merged content from Sanvello.\n\nExplore, the consumer-facing housing of all content libraries at AbleTo, was a cross-product initiative that required consideration of all product IA's in order to make a cohesive, universal experience.",
     categories: ["Mobile", "Desktop", "Healthcare", "Information Architecture"],
-    thumbnailImage: "/placeholder.svg?height=600&width=800",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
+    thumbnailImage: "/explore-cover-thumbnail.jpg?height=600&width=800",
+    coverImage: "/explore-cover.jpg?height=1080&width=1920",
     isProtected: true,
     role: "Product Designer",
-    timeline: "3 months",
+    timeline: "8 months",
     tools: ["Figma", "Maze", "Miro"],
     problem:
       "AbleTo did not have a consumer-facing content library built. After the content library migrated from Sanvello, we needed a scalable IA that could encompass both AbleTo content and Sanvello content. In addition, new content was roadmapped thus the IA had to be flexible. Finally, Explore was a cross-product initiative thus the IA had to make sense for all products it lived in.",
     solution:
       "A dashboard that presents key patient information at a glance, with customizable views and visual indicators for abnormal results. The design reduces cognitive load and helps providers make faster, more informed decisions.",
-  },
-  {
-    id: "cs3",
-    slug: "scheduling",
-    title: "Scheduling",
-    description:
-      "Designing a telehealth platform that connects patients with healthcare providers for virtual consultations.",
-    categories: ["Mobile", "Healthcare", "Consumer Facing"],
-    thumbnailImage: "/placeholder.svg?height=600&width=800",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
-    isProtected: false,
-    role: "Product Designer",
-    timeline: "6 months",
-    tools: ["Figma", "Protopie", "Maze"],
-    problem:
-      "The COVID-19 pandemic created an urgent need for remote healthcare solutions, but existing telehealth platforms were difficult to use, especially for elderly patients.",
-    solution:
-      "A user-friendly telehealth platform with simplified scheduling, clear pre-appointment instructions, and an intuitive video interface. The design includes accessibility features for users with varying abilities and technical expertise.",
-  },
-  {
-    id: "cs4",
-    slug: "checkout",
-    title: "Checkout",
-    description: "Creating a mobile app to help patients manage their medications and improve adherence.",
-    categories: ["Mobile", "MVP", "Consumer Facing"],
-    thumbnailImage: "/placeholder.svg?height=600&width=800",
-    coverImage: "/placeholder.svg?height=1080&width=1920",
-    isProtected: false,
-    role: "UX/UI Designer",
-    timeline: "5 months",
-    tools: ["Figma", "Adobe XD", "Lookback"],
-    problem:
-      "Medication non-adherence is a major healthcare issue, leading to poor health outcomes and increased healthcare costs. Existing medication management tools were either too complex or lacked important features.",
-    solution:
-      "A simple, intuitive mobile app with medication reminders, easy-to-understand instructions, and progress tracking. The app includes features like pill identification, refill reminders, and side effect reporting.",
   },
   {
     id: "cs5",
@@ -94,7 +59,7 @@ export const caseStudies: CaseStudy[] = [
     categories: ["Desktop", "Healthcare", "Tooling", "Information Architecture"],
     thumbnailImage: "/placeholder.svg?height=600&width=800",
     coverImage: "/placeholder.svg?height=1080&width=1920",
-    isProtected: true,
+    isProtected: false,
     role: "UX Architect",
     timeline: "3 months",
     tools: ["Figma", "Optimal Workshop", "Miro"],

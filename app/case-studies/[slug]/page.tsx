@@ -64,7 +64,7 @@ export default function CaseStudyPage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-end">
+        <div className="absolute inset-0 bg-black/20 flex items-end">
           <div className="container py-12">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <Button
@@ -122,7 +122,7 @@ export default function CaseStudyPage() {
 
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
-                src="/placeholder.svg?height=720&width=1280"
+                src={caseStudy.slug === "explore-feature" ? "/explore-problem.jpg" : "/home-problem.jpg"}
                 alt="Problem visualization"
                 fill
                 className="object-cover"
@@ -142,7 +142,7 @@ export default function CaseStudyPage() {
                 </p>
                 <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
-                    src="/placeholder.svg?height=720&width=1280"
+                    src={caseStudy.slug === "explore-feature" ? "/explore-discovery.png" : "/home-discovery.png"}
                     alt="Research process"
                     fill
                     className="object-cover"
@@ -158,7 +158,7 @@ export default function CaseStudyPage() {
                 </p>
                 <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
-                    src="/placeholder.svg?height=720&width=1280"
+                    src={caseStudy.slug === "explore-feature" ? "/explore-iterations.jpg" : "/home-iterations.jpg"}
                     alt="Ideation process"
                     fill
                     className="object-cover"
@@ -177,13 +177,18 @@ export default function CaseStudyPage() {
             </p>
 
             <div className="relative aspect-video overflow-hidden rounded-lg mb-8">
-              <Image src="/placeholder.svg?height=720&width=1280" alt="Final solution" fill className="object-cover" />
+              <Image 
+                src={caseStudy.slug === "explore-feature" ? "/explore-handoff.jpg" : "/home-handoff.jpg"} 
+                alt="Final solution" 
+                fill 
+                className="object-cover" 
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=600"
+                  src={caseStudy.slug === "explore-feature" ? "/explore-handoff-small1.png" : "/home-handoff-small1.png"}
                   alt="Solution detail 1"
                   fill
                   className="object-cover"
@@ -191,7 +196,7 @@ export default function CaseStudyPage() {
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=600"
+                  src={caseStudy.slug === "explore-feature" ? "/explore-handoff-small2.png" : "/home-handoff-small2.png"}
                   alt="Solution detail 2"
                   fill
                   className="object-cover"
@@ -216,7 +221,7 @@ export default function CaseStudyPage() {
               </ul>
 
               <div className="relative aspect-video overflow-hidden rounded-lg">
-                <Image src="/placeholder.svg?height=720&width=1280" alt="Outcome metrics" fill className="object-cover" />
+                <Image src="/home-outcomes.png" alt="Outcome metrics" fill className="object-cover" />
               </div>
             </section>
           )}
