@@ -37,14 +37,14 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
               <Link
-                href="mailto:contact@example.com"
+                href="mailto:danmcsmith@gmail.com"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
               </Link>
               <Link
-                href="https://medium.com"
+                href="https://dansmithlpc.medium.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -53,7 +53,7 @@ export default function Footer() {
                 <SiMedium className="h-5 w-5" />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/dansmithdesigns/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
