@@ -9,6 +9,7 @@ export interface CaseStudy {
   isProtected: boolean
   role?: string
   timeline?: string
+  date?: string
   tools?: string[]
   problem?: string
   solution?: string

@@ -54,6 +54,10 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
       </div>
 
       <div className="p-4 bg-card">
+        <div className="flex items-center text-xs text-muted-foreground mb-1">
+          <span>{caseStudy.date || "2023"}</span>
+        </div>
+
         <h3 className={`text-xl font-semibold mb-2 ${!isComingSoon ? "group-hover:text-accent" : ""} transition-colors`}>
           {caseStudy.title}
         </h3>

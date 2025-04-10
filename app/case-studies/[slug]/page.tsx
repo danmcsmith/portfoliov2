@@ -96,7 +96,7 @@ export default function CaseStudyPage() {
             <h2 className="text-3xl font-bold mb-6">Overview</h2>
             <p className="text-lg text-muted-foreground mb-8">{caseStudy.description}</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-lg font-semibold mb-2">Role</h3>
                 <p>{caseStudy.role || "Lead Product Designer"}</p>
@@ -104,6 +104,10 @@ export default function CaseStudyPage() {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Timeline</h3>
                 <p>{caseStudy.timeline || "3 months"}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Date</h3>
+                <p>{caseStudy.date || "2023"}</p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-2">Tools</h3>
@@ -122,7 +126,7 @@ export default function CaseStudyPage() {
 
             <div className="relative aspect-video overflow-hidden rounded-lg">
               <Image
-                src={caseStudy.slug === "explore-feature" ? "/explore-problem.jpg" : "/home-problem.jpg"}
+                src={caseStudy.slug === "karuna" ? "/karuna-problem.jpg" : caseStudy.slug === "explore-feature" ? "/explore-problem.jpg" : "/home-problem.jpg"}
                 alt="Problem visualization"
                 fill
                 className="object-cover"
@@ -137,28 +141,32 @@ export default function CaseStudyPage() {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Research and discovery</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  During discovery, I focus on researching the problem to ensure a understanding of the information architecture before iterating.
-                  By reviewing legacy research, conducting design audits, interviews with Sanvello stakeholders, in the wild audits, and user research, I build a path for designs to move forward. Taking my time so I have minimal throwaway work later. Moving slowly to move fast.
+                  {caseStudy.slug === "karuna" 
+                    ? "Using atomic design and double diamond concepts, I focus on taking time with researching the design. Once I have a strong understanding of needs and the direction of the design, I use several low fidelity wireframes. During this phase, I take my time testing the low-fidelity wireframes before moving to time intensive high fidelity mockup"
+                    : "During discovery, I focus on researching the problem to ensure a understanding of the information architecture before iterating. By reviewing legacy research, conducting design audits, interviews with Sanvello stakeholders, in the wild audits, and user research, I build a path for designs to move forward. Taking my time so I have minimal throwaway work later. Moving slowly to move fast."}
                 </p>
-                <div className="relative aspect-video overflow-hidden rounded-lg">
-                  <Image
-                    src={caseStudy.slug === "explore-feature" ? "/explore-discovery.png" : "/home-discovery.png"}
-                    alt="Research process"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                {caseStudy.slug !== "karuna" && (
+                  <div className="relative aspect-video overflow-hidden rounded-lg">
+                    <Image
+                      src={caseStudy.slug === "explore-feature" ? "/explore-discovery.png" : "/home-discovery.png"}
+                      alt="Research process"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold mb-4">Ideation, validation, and testing</h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  After having a few IAs and concepts ready, I present design directions to critiques, stakeholder review, and senior leadership meetings for approvals. My final step is validating the direction through user testing. During workshops, design critiques, and jams, iterations are refined and improved, getting closer to the final design phase.
-                  Explore required multiple stakeholders, working cross-functionally. Although I am autonomous and hold myself accountable, for best design output requires a collaborative approach. Through reviews and workshops while following design timelines, the Explore feature continued a forward direction in design, making sure to validate all viable solutions through user testing along the way.
+                  {caseStudy.slug === "karuna" 
+                    ? "Complete concept redesign from ideation to high fidelity mockups. Including wireframing, usability testing, iteration, and interaction design."
+                    : "After having a few IAs and concepts ready, I present design directions to critiques, stakeholder review, and senior leadership meetings for approvals. My final step is validating the direction through user testing. During workshops, design critiques, and jams, iterations are refined and improved, getting closer to the final design phase. Explore required multiple stakeholders, working cross-functionally. Although I am autonomous and hold myself accountable, for best design output requires a collaborative approach. Through reviews and workshops while following design timelines, the Explore feature continued a forward direction in design, making sure to validate all viable solutions through user testing along the way."}
                 </p>
                 <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
-                    src={caseStudy.slug === "explore-feature" ? "/explore-iterations.jpg" : "/home-iterations.jpg"}
+                    src={caseStudy.slug === "karuna" ? "/karuna-ideation.jpg" : caseStudy.slug === "explore-feature" ? "/explore-iterations.jpg" : "/home-iterations.jpg"}
                     alt="Ideation process"
                     fill
                     className="object-cover"
@@ -172,13 +180,14 @@ export default function CaseStudyPage() {
           <section className="mb-16">
             <h2 className="text-xl font-semibold mb-4">Handoff and documentation</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              After final approvals and socializing the new experience, designs are marked "ready for dev" and are handed off.
-              Working in 2 week sprints, I pair with PMs and tech leads to write tickets and help sprint planning. Sitting in an agile pod and running 2 week sprints, we transformed designs into functional features, flagged for release. In addition, I handoff designs to the content teams to start producing copy, illustrations, and organizing how artifacts are displayed. Joined by the clinical team, final designs are reviewed to follow evidence-based best practices.
+              {caseStudy.slug === "karuna" 
+                ? "Final product included a full working mobile prototype of both the therapist and patient platform for all main screens including dashboard, explore, progress, toolbox, and message."
+                : "After final approvals and socializing the new experience, designs are marked \"ready for dev\" and are handed off. Working in 2 week sprints, I pair with PMs and tech leads to write tickets and help sprint planning. Sitting in an agile pod and running 2 week sprints, we transformed designs into functional features, flagged for release. In addition, I handoff designs to the content teams to start producing copy, illustrations, and organizing how artifacts are displayed. Joined by the clinical team, final designs are reviewed to follow evidence-based best practices."}
             </p>
 
             <div className="relative aspect-video overflow-hidden rounded-lg mb-8">
               <Image 
-                src={caseStudy.slug === "explore-feature" ? "/explore-handoff.jpg" : "/home-handoff.jpg"} 
+                src={caseStudy.slug === "karuna" ? "/karuna-handoff.png" : caseStudy.slug === "explore-feature" ? "/explore-handoff.jpg" : "/home-handoff.jpg"} 
                 alt="Final solution" 
                 fill 
                 className="object-cover" 
@@ -188,7 +197,7 @@ export default function CaseStudyPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src={caseStudy.slug === "explore-feature" ? "/explore-handoff-small1.png" : "/home-handoff-small1.png"}
+                  src={caseStudy.slug === "karuna" ? "/karuna-handoff-small1.png" : caseStudy.slug === "explore-feature" ? "/explore-handoff-small1.png" : "/home-handoff-small1.png"}
                   alt="Solution detail 1"
                   fill
                   className="object-cover"
@@ -196,7 +205,7 @@ export default function CaseStudyPage() {
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src={caseStudy.slug === "explore-feature" ? "/explore-handoff-small2.png" : "/home-handoff-small2.png"}
+                  src={caseStudy.slug === "karuna" ? "/karuna-handoff-small2.png" : caseStudy.slug === "explore-feature" ? "/explore-handoff-small2.png" : "/home-handoff-small2.png"}
                   alt="Solution detail 2"
                   fill
                   className="object-cover"
@@ -206,7 +215,7 @@ export default function CaseStudyPage() {
           </section>
 
           {/* Outcomes */}
-          {caseStudy.slug !== "explore-feature" && (
+          {caseStudy.slug !== "explore-feature" && caseStudy.slug !== "karuna" && (
             <section>
               <h2 className="text-3xl font-bold mb-6">Outcomes</h2>
               <p className="text-lg text-muted-foreground mb-8">
