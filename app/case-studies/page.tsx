@@ -6,7 +6,7 @@ import CaseStudyCard from "@/components/case-study-card"
 
 export default function CaseStudiesPage() {
   return (
-    <div className="container py-12 md:py-24">
+    <div className="container pt-24 pb-12 md:py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

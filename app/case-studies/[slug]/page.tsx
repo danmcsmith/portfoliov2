@@ -30,7 +30,7 @@ export default function CaseStudyPage() {
 
   if (!caseStudy) {
     return (
-      <div className="container py-24 text-center">
+      <div className="container pt-24 pb-12 md:py-24 text-center">
         <h1 className="text-3xl font-bold mb-6">Case Study Not Found</h1>
         <Button onClick={() => router.push("/case-studies")}>
           <ArrowLeft className="mr-2 h-4 w-4" /> Back to Work
