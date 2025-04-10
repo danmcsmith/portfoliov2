@@ -46,8 +46,8 @@ export default function Header() {
         isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-6"
       }`}
     >
-      <div className="container flex items-center justify-between">
-        <Link href="/" className="relative h-8 w-24">
+      <div className="container px-4 flex items-center justify-between">
+        <Link href="/" className="relative h-8 w-24 -ml-1">
           {mounted && (
             <img
               src={resolvedTheme === "dark" ? "/logo-light@2x.svg" : "/logo-dark@2x.svg"}
