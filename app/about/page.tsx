@@ -84,6 +84,14 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold mb-4">Experience</h2>
             <div className="space-y-8">
               <div>
+                <h3 className="text-xl font-semibold">Volunteer Product Designer</h3>
+                <p className="text-muted-foreground mb-2">Northwest Avalanche Center (NWAC) • 2025 - Present</p>
+                <p>
+                  Helping the Avy product team organize their design system and make the system scalable. In addition, collaborating with their engineering team to make the system development forward.
+                </p>
+              </div>
+
+              <div>
                 <h3 className="text-xl font-semibold">Senior Product Designer</h3>
                 <p className="text-muted-foreground mb-2">Optum • 2023 - Present</p>
                 <p>
