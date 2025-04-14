@@ -9,7 +9,9 @@ export default function MouseFollower() {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
+      requestAnimationFrame(() => {
+        setMousePosition({ x: e.clientX, y: e.clientY })
+      })
     }
 
     const handleMouseOver = (e: MouseEvent) => {
@@ -22,10 +24,10 @@ export default function MouseFollower() {
         target.closest("button") ||
         target.classList.contains("cursor-pointer")
 
-      setIsHovering(isInteractive)
+      setIsHovering(!!isInteractive)
     }
 
-    window.addEventListener("mousemove", handleMouseMove)
+    window.addEventListener("mousemove", handleMouseMove, { passive: true })
     document.addEventListener("mouseover", handleMouseOver)
 
     return () => {
@@ -56,18 +58,10 @@ export default function MouseFollower() {
           damping: 10,
         }}
       />
-      <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-foreground rounded-full pointer-events-none z-[100] hidden md:block"
-        animate={{
-          x: mousePosition.x - 4,
-          y: mousePosition.y - 4,
-          scale: isHovering ? 0 : 1,
-        }}
-        transition={{
-          type: "spring",
-          mass: 0.1,
-          stiffness: 150,
-          damping: 8,
+      <div
+        className="fixed top-0 left-0 w-2 h-2 bg-foreground rounded-full pointer-events-none z-[100] hidden md:block will-change-transform"
+        style={{
+          transform: `translate3d(${mousePosition.x - 4}px, ${mousePosition.y - 4}px, 0) scale(${isHovering ? 0 : 1})`,
         }}
       />
     </>
