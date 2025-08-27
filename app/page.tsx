@@ -19,14 +19,6 @@ export default function Home() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
-  useEffect(() => {
-    document.documentElement.classList.add("has-custom-cursor")
-
-    return () => {
-      document.documentElement.classList.remove("has-custom-cursor")
-    }
-  }, [])
-
   return (
     <div ref={containerRef} className="grain-texture">
       {/* Hero Section */}

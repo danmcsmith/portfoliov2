@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { AuthProvider } from "@/context/auth-context"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import MouseFollower from "@/components/mouse-follower"
+import { AutoTheme } from "@/components/auto-theme"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           <AuthProvider>
+            <AutoTheme />
             <div className="relative min-h-screen flex flex-col">
-              <MouseFollower />
               <Header />
               <main className="flex-1">{children}</main>
               <Footer />
@@ -43,6 +43,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-import './globals.css'

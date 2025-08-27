@@ -75,17 +75,6 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Custom cursor styles */
-  html.has-custom-cursor {
-    cursor: none;
-  }
-
-  html.has-custom-cursor a,
-  html.has-custom-cursor button,
-  html.has-custom-cursor .cursor-pointer {
-    cursor: none;
-  }
-
   /* Subtle grain texture */
   .grain-texture {
     position: relative;

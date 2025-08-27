@@ -72,13 +72,9 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
           ))}
         </div>
 
-        {isComingSoon ? (
+        {isComingSoon && (
           <div className="flex items-center text-sm font-medium text-foreground">
             Check Back Soon!
-          </div>
-        ) : (
-          <div className="flex items-center text-sm font-medium text-accent">
-            View project <ArrowRight className="ml-1 h-4 w-4" />
           </div>
         )}
       </div>

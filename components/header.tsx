@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ModeToggle } from "@/components/mode-toggle"
 import { useTheme } from "next-themes"
 
 const navItems = [
@@ -79,13 +78,10 @@ export default function Header() {
               )}
             </Link>
           ))}
-
-          <ModeToggle />
         </nav>
 
         {/* Mobile Navigation Toggle */}
-        <div className="flex items-center md:hidden space-x-4">
-          <ModeToggle />
+        <div className="flex items-center md:hidden">
           <Button
             variant="ghost"
             size="icon"
@@ -105,16 +101,17 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-background border-t"
+            className="md:hidden bg-background/95 backdrop-blur-md border-t"
           >
-            <nav className="container py-6 flex flex-col space-y-4">
+            <nav className="container px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   href={item.path}
-                  className={`text-lg py-2 ${
-                    pathname === item.path ? "text-foreground font-medium" : "text-muted-foreground"
+                  className={`block text-lg transition-colors hover:text-foreground ${
+                    pathname === item.path ? "text-foreground" : "text-muted-foreground"
                   }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>

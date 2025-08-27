@@ -53,6 +53,279 @@ export default function CaseStudyPage() {
     )
   }
 
+  // Custom template for therapy consent case study
+  if (caseStudy.slug === "therapy-consent") {
+    return (
+      <article className="pb-24">
+        {/* Hero Section */}
+        <div className="relative h-[50vh] md:h-[70vh] overflow-hidden">
+          <Image
+            src={caseStudy.coverImage || "/placeholder.svg?height=1080&width=1920"}
+            alt={caseStudy.title}
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/20 flex items-end">
+            <div className="container py-12">
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => router.push("/case-studies")}
+                  className="mb-6 bg-background/80 backdrop-blur-sm hover:bg-background/90"
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" /> Back to Work
+                </Button>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">{caseStudy.title}</h1>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {caseStudy.categories.map((category) => (
+                    <span key={category} className="px-3 py-1 text-sm rounded-full bg-accent text-accent-foreground">
+                      {category}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="container max-w-4xl py-12">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+            {/* Overview */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Overview</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                By early 2024, AbleTo—freshly integrated into Optum—offered a diverse product suite ranging from digital self-help to clinician-guided therapy. Compliance regulations required a robust approach to ensure every participant completed their "Consent to Treat" documentation before initiating care.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Role</h3>
+                  <p>{caseStudy.role}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Timeline</h3>
+                  <p>{caseStudy.timeline}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Date</h3>
+                  <p>{caseStudy.date}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Tools</h3>
+                  <p>{caseStudy.tools?.join(", ")}</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Problem */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Problem</h2>
+              <p className="text-lg text-muted-foreground mb-8">{caseStudy.problem}</p>
+              
+              <div className="relative aspect-video overflow-hidden rounded-lg">
+                <Image
+                  src="/therapyconsent-problem.jpg"
+                  alt="Compliance audit dashboard showing low consent rates"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </section>
+
+            {/* Objective */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Objective</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Design an experience that increases the rate of signed consents before the first session (1A), without harming engagement or increasing user drop-off. The initiative specifically targeted raising the signing rate to 80% prior to treatment.
+              </p>
+            </section>
+
+            {/* Process */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Process</h2>
+              <div className="space-y-12">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Research & Audit</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    A cross-sectional analysis kicked off the project, as I evaluated the existing first-time user experience (FTUX) for gaps. Audit findings included a fragmented onboarding flow with over 40 screens and a notably low conversion rate of 37% during onboarding. It became clear that introducing new gates could risk further drop-off, so the focus was on minimizing friction.
+                  </p>
+                  <div className="relative aspect-video overflow-hidden rounded-lg">
+                    <Image
+                      src="/therapyconsent-researchaudit.jpg"
+                      alt="User flow analysis showing fragmented onboarding experience"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Ideation & Iteration</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Iterative design began with competitor and adjacent industry audits—investigating onboarding flows from leading digital health and consumer apps to surface best practices in consent and compliance presentation. Concepts were presented, critiqued in design jams, and refined through multiple design reviews. Five major iteration phases explored where and how to surface the consent—in the welcome flow, as a dedicated task, and within document centers.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="relative aspect-square overflow-hidden rounded-lg">
+                      <Image
+                        src="/therapyconsent-iterations_1.jpg"
+                        alt="Competitor analysis of consent flows"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-square overflow-hidden rounded-lg">
+                      <Image
+                        src="/therapyconsent-iterations_2.jpg"
+                        alt="Design iteration sketches and wireframes"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Quick Prototyping & Stakeholder Validation</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Time constraints demanded rapid prototyping rather than extended user research. High-fidelity interactive prototypes were presented to PMs, engineering leads, clinical partners, and leadership. Questions were anticipated and addressed live in collaborative review sessions.
+                  </p>
+                  <div className="relative aspect-video overflow-hidden rounded-lg">
+                    <Image
+                      src="/therapyconsent-handoff.jpg"
+                      alt="Interactive prototype showing consent flow"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Cross-Functional Handoff</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Handoff included paired working sessions with PM and engineering for Jira ticket creation and Figma handoff, ensuring that every flow and condition (happy/sad paths, skip logic, eligibility gating) was thoroughly documented for development.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Experience & Solution */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Experience & Solution</h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Warm Welcome with Clear Next Steps</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    The onboarding experience was restructured so that new users encountered a concise, friendly message explaining the importance of signing the consent form early—framed as the beginning of their care journey.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Flexible Consent Pathways</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Users had the option to "sign now" or "I'll sign it later," balancing legal needs with user desire for quick access. Skipping surfaced reminders and re-engagement nudges ahead of the first session.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Integrated Document Center</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Consent forms, privacy policies, and participation agreements were easily accessible in the "Forms and Documents" section, reducing confusion and offering transparency.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Provider & System Prompts</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Multiple interaction points—provider reminders, in-app nudges, and system prompts—helped ensure the form was completed prior to any in-person clinical engagement.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Collaboration */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Collaboration</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                A cross-initiative approach defined project execution, bringing together product designers (consumer, provider-facing, pre-care), PMs, engineering, clinical program leads, and provider operations. Weekly standups, agile ceremonies, frequent design reviews, and leadership presentations kept the project moving at the necessary pace.
+              </p>
+            </section>
+
+            {/* Outcomes */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Outcomes</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Signing Rate (target: 80%)</h3>
+                  <p className="text-lg text-muted-foreground mb-4">
+                    At launch, the signing completion rate increased from under 50% to 80% for commercial users.
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2 text-lg">
+                    <li><strong>Commercial:</strong> 85%</li>
+                    <li><strong>Medicaid:</strong> 76%</li>
+                    <li><strong>Medicare Advantage:</strong> 54%</li>
+                  </ul>
+                </div>
+                <p className="text-lg text-muted-foreground">
+                  This improvement was especially pronounced among Optum's commercial customer base; Medicaid and Medicare metrics identified key areas for future iteration.
+                </p>
+                <div className="relative aspect-video overflow-hidden rounded-lg">
+                  <Image
+                    src="/therapyconsent-outcomes.jpg"
+                    alt="Success metrics dashboard showing improved consent rates"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* Constraints */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Constraints</h2>
+              <ul className="list-disc pl-6 space-y-4 text-lg text-muted-foreground">
+                <li>One-month design and rollout window to maintain legal compliance</li>
+                <li>Required use of the Adobe Acrobat E-Sign integration</li>
+                <li>Reuse of existing component libraries; no net-new elements</li>
+                <li>End-to-end solution compatibility with existing provider and care delivery platforms</li>
+              </ul>
+            </section>
+
+            {/* Lessons & Next Steps */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">Lessons & Next Steps</h2>
+              
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Known Issues</h3>
+                  <ul className="list-disc pl-6 space-y-2 text-lg text-muted-foreground">
+                    <li>Some users (especially Medicaid and Medicare) saw lower completion rates due to technical or usability barriers.</li>
+                    <li>Bugs in Salesforce integration and document handoff disrupted the process for certain cohorts.</li>
+                    <li>Paperless-only process limited access for users without email or digital literacy.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Continuous Improvement</h3>
+                  <p className="text-lg text-muted-foreground mb-4">
+                    Work has already started on Phase 2:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-2 text-lg text-muted-foreground">
+                    <li>Gating access to treatment if consent isn't signed post-consultation</li>
+                    <li>Offering paper-based consent forms upon request</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </motion.div>
+        </div>
+      </article>
+    )
+  }
+
+  // Default template for other case studies
   return (
     <article className="pb-24">
       {/* Hero Section */}
