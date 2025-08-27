@@ -220,6 +220,14 @@ export default function CaseStudyPage() {
                   <p className="text-lg text-muted-foreground mb-6">
                     The onboarding experience was restructured so that new users encountered a concise, friendly message explaining the importance of signing the consent form early—framed as the beginning of their care journey.
                   </p>
+                  <div className="relative aspect-video overflow-hidden rounded-lg">
+                    <Image
+                      src="/therapyconsent-finalmock.jpg"
+                      alt="Mobile app screens showing consent form prompt and main dashboard with session details"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
 
                 <div>
